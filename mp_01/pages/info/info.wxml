@@ -1,0 +1,10 @@
+<!--pages/info/info.wxml-->
+<view>
+    1.声明式退出该页面:(可以后退多级)
+</view>
+<navigator open-type="navigateBack" class="navigator-hover" delta="1">后退</navigator>
+
+<view>
+    2.编程式退出该页面:(可以后退多级)
+</view>
+<button bindtap="gotoBack" class="navigator">后退</button>

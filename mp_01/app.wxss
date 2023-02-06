@@ -1,0 +1,25 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* 全局样式 */
+view{
+    padding: 10rpx;
+    margin: 10rpx;
+    background-color: rgb(171, 139, 247);
+}
+
+/* 只有class选择器会有样式隔离效果 id选择器 属性选择器 标签选择器不受样式隔离的影响 */
+text{
+    font-size: 35rpx;
+}
+.g-red-text{
+    color: rgb(255, 166, 0);
+}

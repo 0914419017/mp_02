@@ -1,0 +1,62 @@
+<!--components/test/test.wxml-->
+<text class="g-red-text">1.这里是全局引用的组件：</text>
+<text>
+    ----------------------------------------------
+</text>
+<view>
+    2.count的值是：{{count}}
+</view>
+<button bindtap="addCount" style="width: min-content;height: min-content;">+1</button>
+
+<text>
+    ----------------------------------------------
+</text>
+<view>
+    3.自定义组件的数据监听器:
+</view>
+<view>
+    {{n1}} + {{n2}} = {{sum}}
+</view>
+<button bindtap="addN1" style="width: 250rpx">n1 + 1</button>
+<view />
+<button bindtap="addN2" style="width: 250rpx;">n2 + 1</button>
+
+<text>
+    ----------------------------------------------
+</text>
+<view>
+    4.自定义组件的数据监听器案例(颜色选择器):
+</view>
+<view style="background-color: rgb({{fullColor}});" class="colorBox">颜色值:
+    {{fullColor}}
+</view>
+<button size="mini" bindtap="changeR" type="default">R</button>
+<button size="mini" bindtap="changeG" type="primary">G</button>
+<button size="mini" bindtap="changeB" type="warn">B</button>
+<view>{{_rgb.r}},{{_rgb.g}},{{_rgb.b}}</view>
+
+<text>
+    ----------------------------------------------
+</text>
+<view>
+    5.自定义组件-纯数据字段:
+</view>
+
+<text>
+    ----------------------------------------------
+</text>
+<view>
+    6.这里是组件的内部结构:
+</view>
+<slot></slot>
+
+<text>
+    ----------------------------------------------
+</text>
+<view>
+    <slot name="before"></slot>
+    <view>
+        8.这里是组件的内部结构(多插槽):
+    </view>
+    <slot name="after"></slot>
+</view>

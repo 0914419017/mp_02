@@ -1,0 +1,333 @@
+<!--pages/list/list.wxml-->
+<rich-text nodes="<h4 style='color: red;'>提示:小白最好边看代码边看实现效果</h4>"></rich-text>
+<scroll-view class="container2" scroll-y>
+    <view>
+        <view>
+            1.scroll-view竖滑动:
+        </view>
+        <scroll-view class="containerl" scroll-y>
+            <view>A</view>
+            <view>B</view>
+            <view>C</view>
+        </scroll-view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+
+        <view>
+            2.轮播图的结构:
+        </view>
+        <swiper class="swiper-container" indicator-dots indicator-color="white" indicator-active-color="gray" autoplay interval="1500" circular>
+            <!-- 第一个轮播图 -->
+            <swiper-item>
+                <view class="item">A</view>
+            </swiper-item>
+
+            <!-- 第二个轮播图 -->
+            <swiper-item>
+                <view class="item">B</view>
+            </swiper-item>
+
+            <!-- 第三个轮播图 -->
+            <swiper-item>
+                <view class="item">C</view>
+            </swiper-item>
+        </swiper>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- 常用的基础内容组件 text和 rich-text 的用法 -->
+        <view>
+            <view style="white-space: pre-line;">3.text的长按选中效果:
+                <text selectable>19504252502</text>
+            </view>
+        </view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            4.rich-text的用法:
+        </view>
+        <rich-text nodes="<h2 style='color: red;'>标题</h2>"></rich-text>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- 按钮组件的基本使用 -->
+        <!-- 通过type属性指定按钮颜色类型 -->
+        <view>
+            5.按钮组件的基本使用的基本使用:
+        </view>
+        <button>普通按钮</button>
+        <button type="primary">主色调按钮</button>
+        <button type="warn">警告按钮</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- size="mini" 小尺寸按钮 -->
+        <view>
+            6.小尺寸按钮:
+        </view>
+        <button size="mini">普通按钮</button>
+        <button type="primary" size="mini">主色调按钮</button>
+        <button type="warn" size="mini">警告按钮</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- plain镂空按钮 -->
+        <view>
+            7.镂空按钮:
+        </view>
+        <button size="mini" plain>普通按钮</button>
+        <button type="primary" size="mini" plain>主色调按钮</button>
+        <button type="warn" size="mini" plain>警告按钮</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- image图片组件 -->
+        <view>
+            8.image图片组件:
+        </view>
+        <image src="/images/1.png" mode="aspectFill"></image>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            9.数据绑定:
+        </view>
+        <view>{{info}}</view>
+        <image src="{{imgSrc}}" mode="widthFix"></image>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            10.三元运算符和两位数以内的随机数:
+        </view>
+        <view>{{randomNum1 >= 5 ? '数字大于或等于5':'数字小于5'}}</view>
+        <view>{{randomNum2*100}}</view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            11.事件绑定:
+        </view>
+        <!-- 事件绑定 -->
+        <button type="primary" bindtap="btnTapHandler">按钮</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            12.+1按钮的点击事件:
+        </view>
+        <button type="primary" bindtap="CountChange">+1</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- 事件传参 -->
+        <view>
+            13.小程序不能绑定事件的同时为事件处理函数传递参数:
+        </view>
+        <button type="primary" bindtap="btnTap2" data-info="{{2}}">+2</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- inputHandler的格式 -->
+        <view>
+            14.bindinput的语法格式:
+        </view>
+        <input value="{{msg}}" bindinput="inputHandler" placeholder-style="color:#F76260" placeholder="请输入内容"></input>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            15.条件渲染:
+        </view>
+        <view wx:if="{{type == 1}}">男</view>
+        <view wx:elif="{{type == 2}}">女</view>
+        <view wx:else>保密</view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- <block/> 并不是一个组件，它仅仅是一个包装元素，不会在页面中做任何渲染，只接受控制属性。 -->
+        <view>
+            16. 如果要一次性判断多个组件标签，可以使用一个block 标签将多个组件包装起来，并在上边使用 wx:if控制属性:
+        </view>
+        <block wx:if="{{true}}">
+            <view> view1</view>
+            <view> view2</view>
+        </block>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- 惰性的 控制元素的隐藏与显示 -->
+        <view hidden="{{flag}}"> 17.条件为true的时候隐藏元素 否则显示</view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <!-- 列表渲染 -->
+        <view>
+            18.列表渲染:
+        </view>
+        <view wx:for="{{arr1}}" wx:key="index">
+            索引是:{{index}},item项是:{{item}}
+        </view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            19.列表渲染的第二种方法:
+        </view>
+        <view wx:for="{{arr1}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx">
+            索引是:{{idx}},item项是:{{itemName}}
+        </view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            20.key:(导入外部样式):
+        </view>
+        <view wx:for="{{userList}}" wx:key="id" class="username">{{item.name}}</view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            21.GET请求:
+        </view>
+        <button bindtap="getInfo">发起GET请求</button>
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            22.POST请求:
+        </view>
+        <button bindtap="postInfo">发起POST请求</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            23.声明式导航之导航到tabBar消息页面:
+        </view>
+        <navigator url="/pages/test/test" open-type="switchTab" style="color: rgb(255, 255, 255);">点击导航到tabBar消息页面</navigator>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            24.声明式导航之导航到非tabBar消息页面(非tabBar指未配置的页面):
+        </view>
+        <navigator url="/pages/info/info" open-type="navigate" style="color: white">点击导航到非tabBar info页面</navigator>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            25.编程式导航之导航到tabBar消息页面:
+        </view>
+        <button bindtap="gotoMessage">跳转到消息页面</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            26.编程式导航之导航到非tabBar消息页面:
+        </view>
+        <button bindtap="gotoInfo">跳转到info页面</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            27.声明式导航传参:
+        </view>
+        <navigator url="/pages/info/info?name=ws&age=22" style="color: white">跳转到info页面</navigator>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            28.导航式导航传参(携带参数):
+        </view>
+        <button bindtap="gotoInfo2">跳转到info页面</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            29.上拉触底事件:
+        </view>
+        <view style="background-color: lightblue; height: 300rpx;"></view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            30.自定义组件(全局引用 注意下面是引用另一个页面):
+        </view>
+        <my-test1 max="9"></my-test1>
+
+        <my-test1>
+            <view slot="before">
+                7.这是通过插槽填充的内容(单插槽):
+            </view>
+            <view slot="after">
+                ~~~~~~
+            </view>
+        </my-test1>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            31.父子组件之间的通信:
+        </view>
+        <my-test5 count="{{count}}" bind:sync="syncCount" class="customA" id="cA"></my-test5>
+        <view>
+            父组件中:count值为:{{count}}
+        </view>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            32.获取子组件的实例对象:
+        </view>
+        <button bindtap="getChild" >获取组件的实例对象</button>
+
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            33.自定义组件behaviors:
+        </view>
+        <text style="color: rgb(236, 13, 199);">在behavior中的用户名是：{{username}}</text>  
+            
+        <view>
+            ----------------------------------------------
+        </view>
+        <view>
+            33.自定义组件behaviors的覆盖规则:
+        </view> 
+        <text style="color: rgb(236, 13, 13);">在behavior中的昵称是：{{nickname}}</text> 
+
+    </view>
+</scroll-view>

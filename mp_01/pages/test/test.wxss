@@ -1,0 +1,6 @@
+/* pages/test/test.wxss */
+/* 局部样式 */
+view{
+    color: rgb(93, 248, 54);
+    background: chocolate;
+}

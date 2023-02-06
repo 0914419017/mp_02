@@ -1,0 +1,8 @@
+<!--pages/contact/contact.wxml-->
+<view>
+    上拉触底时获取随机颜色
+</view>
+
+<view wx:for="{{colorList}}" wx:key="index" class="num-item" style="background-color: rgba({{item}});">
+    {{item}}
+</view>

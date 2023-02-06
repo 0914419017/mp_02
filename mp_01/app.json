@@ -1,0 +1,55 @@
+{
+    "pages": [
+        "pages/list/list",
+        "pages/home/home",
+        "pages/test/test",
+        "pages/contact/contact",
+        "pages/info/info",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/shoplist/shoplist",
+        "components/test5/test5"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#2b4b6b",
+        "navigationBarTitleText": "星光不问赶路人",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#efefef",
+        "onReachBottomDistance": 100
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/list/list",
+                "text": "知识",
+                "iconPath": "/images/list.png",
+                "selectedIconPath": "/images/list-active.png"
+            },
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "/images/home.png",
+                "selectedIconPath": "/images/home-active.png"
+            },
+            {
+                "pagePath": "pages/test/test",
+                "text": "消息",
+                "iconPath": "/images/message.png",
+                "selectedIconPath": "/images/message-active.png"
+            },
+            {
+                "pagePath": "pages/contact/contact",
+                "text": "联系我们",
+                "iconPath": "/images/contact.png",
+                "selectedIconPath": "/images/contact-active.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "my-test1": "/components/test/test",
+        "my-test5": "/components/test5/test5"
+    }
+}

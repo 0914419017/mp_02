@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "my-test1": "/components/test/test"
+    },
+    "onReachBottomDistance":150
+}

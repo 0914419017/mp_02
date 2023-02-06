@@ -1,0 +1,8 @@
+/* pages/info/info.wxss */
+.navigator {
+    color:red;
+  }
+
+.navigator-hover {
+    color:#ff08ad;
+  }

@@ -1,0 +1,29 @@
+<!--pages/test/test.wxml-->
+<text>
+    1.下拉可刷新(刷新将重新加载数据):
+</text>
+<view>
+    count的值是:{{count}}
+</view>
+<button bindtap="addCound" style="width: min-content;">+1</button>
+
+<text style="background-color: rgb(255, 255, 255);">
+    ----------------------------------------------
+</text>
+<text>
+    2.将字符串大小写的转化（大写转小写并用wxs的外部关联样式）:
+</text>
+<view>
+    {{m1.toUpper(username)}}
+</view>
+<view>
+    {{m2.toLower(country)}}
+</view>
+<!-- 大小写互转并用wxs的外部关联样式 -->
+<wxs src="../../utils/tools.wxs" module="m2"></wxs>
+<!-- 将字符串大小写的转化 -->
+<wxs module="m1">
+    module.exports.toUpper = function (str) {
+        return str.toUpperCase()
+    }
+</wxs>

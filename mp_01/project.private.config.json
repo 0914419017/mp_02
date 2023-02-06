@@ -1,0 +1,41 @@
+{
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "projectname": "mp_01",
+    "setting": {
+        "compileHotReLoad": true
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "联系我们页面的开发与调试",
+                    "pathName": "pages/contact/contact",
+                    "query": "name=ws&age=22",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/test/test",
+                    "query": "name=ws",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "pages/shoplist/shoplist",
+                    "pathName": "pages/shoplist/shoplist",
+                    "query": "id=1&title=美食",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "pages/list/list",
+                    "pathName": "pages/list/list",
+                    "query": "name=ws",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}
